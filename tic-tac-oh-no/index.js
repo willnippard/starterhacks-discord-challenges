@@ -43,4 +43,4 @@ const playTurn = () => {
 const board = new Board(3);
 board.printBoard();
 
-playTurn(); //we have to actually start our recursion somehow
+playTurn();
