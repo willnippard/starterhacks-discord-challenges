@@ -95,6 +95,19 @@ class Board {
     return false;
   }
 
+  getEmptySquares() {
+    const availableSquares = [];
+    for (let i = 0; i < this.size; i++) {
+      for (let j = 0; j < this.size; j++) {
+        if (this.squares[i][j] === ' ') {
+          availableSquares.push(`${j} ${i}`);
+        }
+      }
+    }
+
+    return availableSquares;
+  }
+
   isValidMove(x, y) {
     return this.squares[y][x] === ' ';
   }
@@ -107,6 +120,8 @@ class Board {
     } else {
       this.currLetter = 'x';
     }
+
+    this.printBoard();
   }
 }
 
