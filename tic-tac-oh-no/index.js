@@ -65,7 +65,6 @@ const playTurn = (playType) => {
 
 // Auto-run
 const board = new Board(3);
-let playType = '';
 rl.question(
   "Would you like to play PvP or PvC (input 'p' or 'c'): ",
   (line) => {
